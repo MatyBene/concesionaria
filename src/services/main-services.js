@@ -3,8 +3,10 @@ let autosImportados = require("../data/autos");
 module.exports = {
   autos: autosImportados,
   buscarAuto: function (patente) {
-    let auto = this.autos.find((auto) => auto.patente === patente);
-    return auto != undefined ? auto : null;
+    let autoEncontrado = this.autos.find(
+      (auto) => auto.patente === patente.toUpperCase()
+    );
+    return autoEncontrado != undefined ? autoEncontrado : null;
   },
   venderAuto: function (patente) {
     let auto = this.buscarAuto(patente);
