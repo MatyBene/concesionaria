@@ -2,7 +2,7 @@ const { mock } = require("node:test");
 const concesionaria = require("../../src/services/main-services");
 
 describe("mainServices", () => {
-  it("si le damos una patente deberia devolver un auto", () => {
+  it("si le damos una patente deberia devolver el auto que posea esa patente", () => {
     //Arrange(ordenar mis datos)
     const mockAutos = [
       {
@@ -46,7 +46,7 @@ describe("mainServices", () => {
     //Assert(que quiero esperar, y lo compara con lo que llego)
     expect(result).toEqual(null);
   });
-  it("si le damos una patente en minusculas deberia devolver un auto", () => {
+  it("si le damos una patente en minusculas deberia devolver el auto que posea esa patente", () => {
     //Arrange(ordenar mis datos)
     const mockAutos = [
       {
