@@ -1,4 +1,5 @@
 const mockAutos = [
+  //0
   {
     marca: "Ford",
     modelo: "Fiesta",
@@ -10,6 +11,7 @@ const mockAutos = [
     patente: "APL123",
     vendido: false,
   },
+  //1
   {
     marca: "Toyota",
     modelo: "Corolla",
@@ -21,6 +23,7 @@ const mockAutos = [
     patente: "JJK116",
     vendido: false,
   },
+  //2
   {
     marca: "Toyota",
     modelo: "Corolla",
@@ -32,6 +35,7 @@ const mockAutos = [
     patente: "JJK117",
     vendido: true,
   },
+  //3
   {
     marca: "Chevrolet",
     modelo: "Cruze",
@@ -43,6 +47,7 @@ const mockAutos = [
     patente: "BCD234",
     vendido: false,
   },
+  //4
   {
     marca: "Volkswagen",
     modelo: "Golf",
@@ -54,6 +59,7 @@ const mockAutos = [
     patente: "EFG345",
     vendido: false,
   },
+  //5
   {
     marca: "Renault",
     modelo: "Clio",
@@ -65,6 +71,7 @@ const mockAutos = [
     patente: "HIJ456",
     vendido: true,
   },
+  //6
   {
     marca: "Peugeot",
     modelo: "208",
@@ -76,6 +83,7 @@ const mockAutos = [
     patente: "KLM567",
     vendido: false,
   },
+  //7
   {
     marca: "Honda",
     modelo: "Civic",
@@ -87,6 +95,7 @@ const mockAutos = [
     patente: "NOP678",
     vendido: true,
   },
+  //8
   {
     marca: "Hyundai",
     modelo: "Elantra",
@@ -98,6 +107,7 @@ const mockAutos = [
     patente: "QRS789",
     vendido: false,
   },
+  //9
   {
     marca: "Fiat",
     modelo: "Punto",
