@@ -9,6 +9,12 @@ describe("puedeComprar", () => {
     concesionaria.personas = mockPersonas;
   });
 
+  test("deberia devolver verdadero si puede pagar la cuota y puede pagar el monto total", () => {
+    const auto = concesionaria.buscarAuto("JJK116");
+    const result = concesionaria.puedeComprar(auto, concesionaria.personas[0]);
+    expect(result).toEqual(true);
+  });
+
   test("deberia devolver falso si puede pagar la cuota pero no puede pagar el monto total", () => {
     const auto = concesionaria.buscarAuto("APL123");
     const result = concesionaria.puedeComprar(auto, concesionaria.personas[0]);

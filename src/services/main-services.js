@@ -39,8 +39,8 @@ module.exports = {
   },
   puedeComprar: function (auto, persona) {
     return (
-      auto.precio / auto.cuotas < persona.capacidadDePagoEnCuotas &&
-      auto.precio < persona.capacidadDePagoTotal
+      auto.precio / auto.cuotas <= persona.capacidadDePagoEnCuotas &&
+      auto.precio <= persona.capacidadDePagoTotal
     );
   },
   autosQuePuedeComprar: function (persona) {
