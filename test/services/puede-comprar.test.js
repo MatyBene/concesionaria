@@ -26,4 +26,10 @@ describe("puedeComprar", () => {
     const result = concesionaria.puedeComprar(auto, concesionaria.personas[5]);
     expect(result).toEqual(false);
   });
+
+  test("deberia devolver falso si no puede pagar la cuota y no puede pagar el monto total", () => {
+    const auto = concesionaria.buscarAuto("EFG345");
+    const result = concesionaria.puedeComprar(auto, concesionaria.personas[0]);
+    expect(result).toEqual(false);
+  });
 });
