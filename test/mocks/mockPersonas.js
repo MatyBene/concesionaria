@@ -33,7 +33,7 @@ let mockPersonas = [
   {
     nombre: "María",
     capacidadDePagoEnCuotas: 20000,
-    capacidadDePagoTotal: 100000,
+    capacidadDePagoTotal: 300000,
   },
 ];
 

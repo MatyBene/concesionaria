@@ -54,7 +54,7 @@ const mockAutos = [
     precio: 250000,
     km: 500,
     color: "Negro",
-    cuotas: 20,
+    cuotas: 10,
     anio: 2020,
     patente: "EFG345",
     vendido: false,
