@@ -1,7 +1,9 @@
 let autosImportados = require("../data/autos");
+let personasImportadas = require("../data/personas");
 
 module.exports = {
   autos: autosImportados,
+  personas: personasImportadas,
   buscarAuto: function (patente) {
     let autoEncontrado = this.autos.find(
       (auto) => auto.patente === patente.toUpperCase()
