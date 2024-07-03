@@ -1,11 +1,14 @@
 const { Router } = require("express");
+const router = Router();
 
-const mainControllers = require("../controllers/main-controllers");
+const mainController = require("../controllers/main-controllers");
 
-const mainRouter = Router();
+router.get("/", mainController.paginaInicio);
 
-mainRouter.get("/ventas", mainControllers.listaDeVentas);
-mainRouter.get("/autos", mainControllers.autosParaLaVenta);
-mainRouter.get("/:patente", mainControllers.buscarAuto);
+const autosRouter = require("./autos-routes");
+router.use("/autos", autosRouter);
 
-module.exports = mainRouter;
+const personasRouter = require("./personas-routes");
+router.use("/personas", personasRouter);
+
+module.exports = router;
