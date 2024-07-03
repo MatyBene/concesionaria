@@ -13,6 +13,13 @@ describe("autosQueOuedeComprar", () => {
     const result = concesionaria.autosQuePuedeComprar(
       concesionaria.personas[0]
     );
-    expect(result).toEqual();
+    expect(result).toEqual([mockAutos[1]]);
+  });
+
+  test("deberia devolver un array vacio cuando una persona no puede comprar ningun auto", () => {
+    const result = concesionaria.autosQuePuedeComprar(
+      concesionaria.personas[1]
+    );
+    expect(result).toEqual([]);
   });
 });
