@@ -7,5 +7,20 @@
   </head>
   <body>
     DETALLE DE AUTO
+    <% if(auto) { %>
+      <div>
+        <%= auto.marca %> 
+        <%= auto.modelo %> 
+        <%= auto.precio %> 
+        <%= auto.km %> 
+        <%= auto.color %> 
+        <%= auto.cuotas %> 
+        <%= auto.anio %> 
+        <%= auto.patente %> 
+        <%= auto.vendido %>
+      </div>
+    <% } else { %>
+      <div>El auto no se encuentra en la base de datos</div>
+    <% } %>
   </body>
 </html>

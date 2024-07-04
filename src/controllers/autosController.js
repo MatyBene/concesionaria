@@ -9,6 +9,15 @@ const autosController = {
       res.send("ERROR");
     }
   },
+  detalleAuto: async (req, res) => {
+    try {
+      const patente = req.params.patente;
+      const auto = mainService.buscarAuto(patente);
+      res.render("autos/detalleAuto", { auto });
+    } catch {
+      res.send("ERROR");
+    }
+  },
 };
 
 module.exports = autosController;
