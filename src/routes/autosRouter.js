@@ -3,7 +3,8 @@ const router = Router();
 
 const autosController = require("../controllers/autosController");
 
-// router.get('/', autosController.listaAutos);
+router.get("/", autosController.listadoDeAutos);
 
-// router.get('/:patente', autosController.detalleAuto);
+// router.get("/:patente", autosController.detalleAuto);
 
+module.exports = router;

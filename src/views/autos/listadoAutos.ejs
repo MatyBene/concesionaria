@@ -7,5 +7,18 @@
   </head>
   <body>
     LISTADO DE AUTOS
+    <% listado.forEach(auto => { %>
+      <div>
+        <%= auto.marca %> 
+        <%= auto.modelo %> 
+        <%= auto.precio %> 
+        <%= auto.km %> 
+        <%= auto.color %> 
+        <%= auto.cuotas %> 
+        <%= auto.anio %> 
+        <%= auto.patente %> 
+        <%= auto.vendido %> 
+      </div>
+    <% }); %>
   </body>
 </html>

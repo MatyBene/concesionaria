@@ -5,8 +5,8 @@ const mainController = require("../controllers/mainController");
 
 router.get("/", mainController.inicio);
 
-// const autosRouter = require("./autosRouter");
-// router.use("/autos", autosRouter);
+const autosRouter = require("./autosRouter");
+router.use("/autos", autosRouter);
 
 // const personasRouter = require("./personasRouter");
 // router.use("/personas", personasRouter);
