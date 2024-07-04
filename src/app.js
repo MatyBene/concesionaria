@@ -4,7 +4,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 
-const mainRouter = require("./routes/main-routes");  
+const mainRouter = require("./routes/mainRouter");  
 app.use(mainRouter);
 app.get("/", (req, res) => {
   res.redirect("/");

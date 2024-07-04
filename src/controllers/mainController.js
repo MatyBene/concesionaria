@@ -1,4 +1,4 @@
-const mainServices = require("../services/main-services");
+const mainServices = require("../services/mainService");
 
 module.exports = {
   buscarAuto: (req, res) => {
