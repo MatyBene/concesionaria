@@ -1,19 +1,19 @@
 //const { mock } = require("node:test");
-const concesionaria = require("../../src/services/main-services");
+const autosService = require("../../src/services/autosService");
 const mockAutos = require("../mocks/mockAutos");
 
 describe("totalDeVentas", () => {
   beforeEach(() => {
-    concesionaria.autos = mockAutos;
+    autosService.autos = mockAutos;
   });
 
   test("deberia devolver la suma de todos los precios de los autos vendidos", () => {
-    const result = concesionaria.totalDeVentas();
+    const result = autosService.totalDeVentas();
     expect(result).toEqual(520000);
   });
 
   test("deberia devolver cero si no hay ningun auto vendido", () => {
-    concesionaria.autos = [
+    autosService.autos = [
       {
         marca: "Ford",
         modelo: "Fiesta",
@@ -26,7 +26,7 @@ describe("totalDeVentas", () => {
         vendido: false,
       },
     ];
-    const result = concesionaria.totalDeVentas();
+    const result = autosService.totalDeVentas();
     expect(result).toEqual(0);
   });
 });

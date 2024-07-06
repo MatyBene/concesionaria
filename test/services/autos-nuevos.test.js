@@ -1,19 +1,19 @@
 //const { mock } = require("node:test");
-const concesionaria = require("../../src/services/main-services");
+const autosService = require("../../src/services/autosService");
 const mockAutos = require("../mocks/mockAutos");
 
 describe("autosNuevos", () => {
   beforeEach(() => {
-    concesionaria.autos = mockAutos;
+    autosService.autos = mockAutos;
   });
 
   test("deberia devolver los autos disponibles para la venta que tengan 100km o menos", () => {
-    const result = concesionaria.autosNuevos();
+    const result = autosService.autosNuevos();
     expect(result).toEqual([mockAutos[0], mockAutos[1]]);
   });
 
   test("deberia retornar un array vacio si ningun auto tiene 100km o menos", () => {
-    concesionaria.autos = [
+    autosService.autos = [
       {
         marca: "Toyota",
         modelo: "Corolla",
@@ -26,7 +26,7 @@ describe("autosNuevos", () => {
         vendido: true,
       },
     ];
-    const result = concesionaria.autosNuevos();
+    const result = autosService.autosNuevos();
     expect(result).toEqual([]);
   });
 });
